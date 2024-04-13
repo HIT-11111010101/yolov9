@@ -2,9 +2,7 @@ import os
 import sys
 from pathlib import Path
 import json
-
 import torch
-
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]  # YOLO root directory
 if str(ROOT) not in sys.path:
@@ -16,8 +14,6 @@ from utils.dataloaders import IMG_FORMATS, VID_FORMATS, LoadImages
 from utils.general import (Profile, check_file, check_img_size,
                            increment_path, non_max_suppression, scale_boxes)
 from utils.torch_utils import select_device, smart_inference_mode
-
-
 @smart_inference_mode()
 def run(
         weights=ROOT / 'yolo.pt',  # model path or triton URL
